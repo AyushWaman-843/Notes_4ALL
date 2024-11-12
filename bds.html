@@ -53,14 +53,17 @@
             padding: 10px 5px;
         }
         .mainbar ul li a {
+            padding-left: 20px;
+            padding-right: 20px;
             font-size: 17px;
             color: white;
             text-decoration: none;
             font-weight: bold;
             background-color: rgba(59, 25, 194, 0.7);
             transition: background-color 0.3s;
-            padding: 12px;
-            border-radius: 15px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 10px;
             border: 1px solid white;
             font-family:Verdana, Geneva, Tahoma, sans-serif;
         }
@@ -89,19 +92,18 @@
         }
         .sidebar {
             position: fixed;
-            right: -350px; /* Initially hidden off-screen */
+            right: -350px; 
             top: 0;
-            width: 350px; /* Default width */
+            width: 350px; 
             height: 100%;
-            background: linear-gradient(135deg, #6a5acd, #00bfff); /* Gradient background */
+            background: linear-gradient(135deg, #6a5acd, #00bfff); 
             color: white;
             transition: right 0.3s ease;
             padding-top: 30px;
             z-index: 9;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Soft shadow for depth */
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); 
         }
 
-        /* Hover effects for sidebar links */
         .sidebar ul {
             list-style-type: none;
             padding: 0;
@@ -110,12 +112,12 @@
         .sidebar ul li {
             border-radius: 10px;
             padding: 15px;
-            transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth background and transform */
+            transition: background-color 0.3s ease, transform 0.3s ease; 
         }
 
         .sidebar ul li:hover {
-            background-color: rgba(255, 255, 255, 0.1); /* Light background on hover */
-            transform: translateX(5px); /* Slide effect on hover */
+            background-color: rgba(255, 255, 255, 0.1); 
+            transform: translateX(5px); 
         }
 
         .sidebar ul li a {
@@ -125,29 +127,27 @@
             color: white;
             text-decoration: none;
             font-weight: bold;
-            transition: color 0.3s ease; /* Smooth color transition */
+            transition: color 0.3s ease; 
         }
 
         .sidebar ul li a:hover {
-            color: #ff7f50; /* Change text color to coral on hover */
-            text-shadow: 0 0 5px rgba(255, 127, 80, 0.9); /* Text shadow for a glowing effect */
+            color: #ff7f50;
+            text-shadow: 0 0 5px rgba(255, 127, 80, 0.9);
         }
 
-        /* Sidebar open class */
         .sidebar.open {
-            right: 0; /* Show sidebar */
+            right: 0; 
         }
 
-        /* Responsive styles */
         @media (max-width: 768px) {
             .sidebar {
-                width: 200px; /* Reduced width on smaller screens */
+                width: 200px; 
             }
         }
 
         @media (max-width: 480px) {
             .sidebar {
-                width: 150px; /* Further reduced width on very small screens */
+                width: 150px; 
             }
         }
 
@@ -155,7 +155,6 @@
             color: lightgray;
         }
 
-        /* Sidebar open class */
         .sidebar.open {
             right: 0;
         }
@@ -165,14 +164,12 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
-            display: none; /* Initially hidden */
-            z-index: 8; /* Below the sidebar but above other content */
+            background: rgba(0, 0, 0, 0.7); 
+            display: none; 
+            z-index: 8; 
         }
-
-        /* When the sidebar is open, show the overlay */
         .sidebar.open + .overlay {
-            display: block; /* Show overlay when sidebar is open */
+            display: block; 
         }
         .overlay {
             position: fixed;
@@ -180,14 +177,13 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
-            display: none; /* Initially hidden */
-            z-index: 8; /* Below the sidebar but above other content */
+            background: rgba(0, 0, 0, 0.7); 
+            display: none; 
+            z-index: 8;
         }
 
-        /* When the sidebar is open, show the overlay */
         .sidebar.open + .overlay {
-            display: block; /* Show overlay when sidebar is open */
+            display: block; 
         }
         .profile {
             display: flex;
@@ -212,8 +208,8 @@
             color: white;
         }
         #edit-icon {
-            font-size: 20px; /* Adjust size as needed */
-            vertical-align: middle; /* Align with text */
+            font-size: 20px; 
+            vertical-align: middle; 
         }
         .papermarket{
             
@@ -244,7 +240,6 @@
             margin-bottom: 1rem;
         }
 
-        /* Search Bar Styling */
         .search-bar {
             display: flex;
             justify-content: center;
@@ -275,7 +270,6 @@
             background-color: rgba(59, 25, 194, 0.7);
         }
 
-        /* Filter Section Styling */
         .filters {
             display: flex;
             justify-content: center;
@@ -292,16 +286,14 @@
             background-color: #fff;
         }
 
-        /* Container for Papers */
         .container {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             padding: 2rem;
-            gap: 2rem; /* Adjust spacing between cards */
+            gap: 2rem; 
         }
 
-        /* Paper Card Styling */
         .paper-card {
             background-color: rgba(255, 255, 255, 0.8);
             border-radius: 10px;
@@ -405,12 +397,12 @@
             </h2>
             <div class="mainbar">
                 <ul>
-                    <li><a href="index.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Home&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
-                    <li><a href="tt.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TimeTable&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
-                    <li><a href="examtt.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Exam TT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
-                    <li><a href="attendance.html">&nbsp;&nbsp;&nbsp;Attendance Calc&nbsp;&nbsp;&nbsp;</a></li>
-                    <li><a href="todolist.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To-Do List&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
-                    <li><a href="contact.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Contact&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="tt.html">TimeTable</a></li>
+                    <li><a href="examtt.html">Exam TT</a></li>
+                    <li><a href="attendance.html">Attendance </a></li>
+                    <li><a href="todolist.html">To-Do list</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
             <button class="navmenu" onclick="toggleSidebar()">
@@ -466,7 +458,6 @@
             </div>
         
             <div class="container" id="papers-grid">
-                <!-- Paper Cards will be dynamically inserted here -->
             </div>
         </div>
         <div id="chatbotbtn" class="chatbotbutton">
@@ -508,9 +499,7 @@
 
         function displayPapers(filteredPapers) {
             const papersGrid = document.getElementById("papers-grid");
-            papersGrid.innerHTML = ""; // Clear previous results
-
-            // Ensure at most 6 items are displayed with placeholders if needed
+            papersGrid.innerHTML = ""; 
             const papersToDisplay = filteredPapers.slice(0, 10);
 
             papersToDisplay.forEach(paper => {
@@ -547,7 +536,7 @@
         function downloadFile(fileUrl) {
             const link = document.createElement('a');
             link.href = fileUrl;
-            link.download = fileUrl.split('/').pop(); // This will ensure the correct filename is used
+            link.download = fileUrl.split('/').pop(); 
             link.click();
         }
 
@@ -555,23 +544,22 @@
         document.getElementById("subject").addEventListener("change", applyFilters);
         document.getElementById("type").addEventListener("change", applyFilters);
 
-        // Initial display of all papers
+        
         displayPapers(papers);
 
 
         document.addEventListener("DOMContentLoaded", function () {
-            const username = localStorage.getItem("loggedInUser"); // Retrieve the logged-in username
+            const username = localStorage.getItem("loggedInUser");
             const usernameDisplay = document.querySelector(".username");
             const editIcon = document.getElementById("edit-icon");
 
             if (username && usernameDisplay) {
-                usernameDisplay.textContent = username; // Display the saved username
+                usernameDisplay.textContent = username; 
 
-                // Load and display the saved profile image for the specific user
                 const savedImage = localStorage.getItem(`${username}_profileImage`);
                 const profileImage = document.getElementById("profile-image");
                 if (savedImage) {
-                    profileImage.src = savedImage; // Load saved image if it exists
+                    profileImage.src = savedImage; 
                 }
             }
 
@@ -579,7 +567,7 @@
             const profileImage = document.getElementById("profile-image");
 
             document.getElementById("edit-icon").addEventListener("click", function() {
-                imageUpload.click(); // Trigger file input on icon click
+                imageUpload.click(); 
             });
 
             imageUpload.addEventListener("change", function() {
@@ -587,15 +575,13 @@
                 if (file) {
                     const reader = new FileReader();
                     reader.onload = function(event) {
-                        // Show confirmation popup
                         const confirmSave = confirm("Are you sure you want to save this image?");
                         if (confirmSave) {
-                            profileImage.src = event.target.result; // Set the image source
-                            // Save image to localStorage with the username as part of the key
+                            profileImage.src = event.target.result; 
                             localStorage.setItem(`${username}_profileImage`, event.target.result); 
                         }
                     }
-                    reader.readAsDataURL(file); // Read the file as a data URL
+                    reader.readAsDataURL(file); 
                 }
             });
         });

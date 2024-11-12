@@ -53,14 +53,17 @@
             padding: 10px 5px;
         }
         .mainbar ul li a {
+            padding-left: 20px;
+            padding-right: 20px;
             font-size: 17px;
             color: white;
             text-decoration: none;
             font-weight: bold;
             background-color: rgba(59, 25, 194, 0.7);
             transition: background-color 0.3s;
-            padding: 12px;
-            border-radius: 15px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 10px;
             border: 1px solid white;
             font-family:Verdana, Geneva, Tahoma, sans-serif;
         }
@@ -380,6 +383,64 @@
             right: 7px;
             font-size: 35px;
         }
+        @media (max-width: 768px) {
+        nav {
+            font-size: 3vw;
+        }
+        video{
+            height: 100%;
+        }
+        .hero{
+            min-height: 100%;
+        }
+        .sidebar {
+            width: 250px;
+        }
+        .headersearch h1 {
+            margin-top: 0;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .cursor{
+            height:40px;
+            width: 10px;
+        }
+        .popup-container{
+            display: none;
+        }
+        .filters select{
+            width: 180px;
+        }
+        .paper-card {
+            width: 165px;
+        }
+        .chatbot{
+            width: 300px;
+            height: 400px;
+            top: 47%;
+            right: 1%;
+        }
+        .popup-container{
+            width: 200px;
+            height: 320px;
+            font-size: 10px;
+        }
+        .papermarket{
+            height: 852px;
+        }
+    }
+    @media (max-width: 480px) {
+        nav {
+            padding: 15px 5%;
+        }
+        .sidebar {
+            width: 300px;
+        }
+        .mainbar{
+            display: none;
+        }
+        
+    }
     </style>
 
 </head>
@@ -407,12 +468,12 @@
             </h2>
             <div class="mainbar">
                 <ul>
-                    <li><a href="index.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Home&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
-                    <li><a href="tt.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TimeTable&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
-                    <li><a href="examtt.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Exam TT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
-                    <li><a href="attendance.html">&nbsp;&nbsp;&nbsp;Attendance Calc&nbsp;&nbsp;&nbsp;</a></li>
-                    <li><a href="todolist.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To-Do List&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
-                    <li><a href="contact.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Contact&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="tt.html">TimeTable</a></li>
+                    <li><a href="examtt.html">Exam TT</a></li>
+                    <li><a href="attendance.html">Attendance </a></li>
+                    <li><a href="todolist.html">To-Do list</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
             <button class="navmenu" onclick="toggleSidebar()">
@@ -444,10 +505,9 @@
         </nav>
         <div class="papermarket" id="target-section">
             <div class="headersearch">
-                <h1>Environmental Science</h1>
+                <h1>Management Account For Engineers</h1>
                 <p>Find and download past exam papers with ease!</p>
             </div>
-        
             <div class="search-bar">
                 <input type="text" id="search-bar" placeholder="Search for exam papers..." aria-label="Search papers">
                 <button id="search-button" type="button">Search</button>
@@ -455,10 +515,10 @@
         
             <div class="filters">
                 <select id="subject" aria-label="Select Subject">
-                    <option value="EVS">Environmental Science</option>
+                    <option value="MAE">MAE</option>
                 </select>
                 <select id="type" aria-label="Select Exam Type">
-                    <option value="PPT">Lecture PPTS</option>
+                    <option value="Notes">Notes</option>
                 </select>
             </div>
         
@@ -478,16 +538,9 @@
             });
         });
         const papers = [
-            { title: "Unit 1 Introduct to Environmental Science", subject: "EVS", type: "PPT", image: "unit1evs.jpg", pdf: "01 Introduction (1).pdf" },
-            { title: "Unit 2 Natural Resources", subject: "EVS", type: "PPT", image: "unit2evs.jpg", pdf: "02 Natural Resources (1).pdf" },
-            { title: "Unit 3 Environmental Pollution", subject: "EVS", type: "PPT", image: "unit3evs.jpg", pdf: "03 Env Pollution (1).pdf" },
-            { title: "Unit 4 Bio Diversity", subject: "EVS", type: "PPT", image: "unit4evs.jpg", pdf: "BIO DIVERSITY unit 4.pdf" },
-            { title: "Unit 5 Climate Change", subject: "EVS", type: "PPT", image: "unit5evs.jpg", pdf: "Climate change unit 6.pdf" },
-            { title: "Unit 1 Introduct to Environmental Science", subject: "EVS", type: "PPT", image: "unit1evs.jpg", pdf: "01 Introduction (1).pdf" },
-            { title: "Unit 2 Natural Resources", subject: "EVS", type: "PPT", image: "unit2evs.jpg", pdf: "02 Natural Resources (1).pdf" },
-            { title: "Unit 3 Environmental Pollution", subject: "EVS", type: "PPT", image: "unit3evs.jpg", pdf: "03 Env Pollution (1).pdf" },
-            { title: "Unit 4 Bio Diversity", subject: "EVS", type: "PPT", image: "unit4evs.jpg", pdf: "BIO DIVERSITY unit 4.pdf" },
-            { title: "Unit 5 Climate Change", subject: "EVS", type: "PPT", image: "unit5evs.jpg", pdf: "Climate change unit 6.pdf" }    
+            { title: "Unit 1 Introduct to Environmental Science", subject: "MAE", type: "Notes", image: "unit1mae.jpg", pdf: "Inventory managament  (1) (2).pdf" },
+            { title: "Unit 2 Natural Resources", subject: "MAE", type: "Notes", image: "unit2mae.jpg", pdf: "cost sheet(1) (2).pdf" },
+               
         ];
 
         function displayPapers(filteredPapers) {
